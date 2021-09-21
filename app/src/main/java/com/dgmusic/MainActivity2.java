@@ -16,17 +16,11 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         textView1 = findViewById(R.id.textView1);
-       // Informations getInf = (Informations) getIntent().getSerializableExtra("nesne");
-
-        String gelenMesaj = "Name : "+getIntent().getStringExtra("firsName") +" "
-                + getIntent().getStringExtra("lastName")
-                +"\nAge : "+String.valueOf(getIntent().getIntExtra("age",0)+"\nCompany Name: : " + getIntent().getStringExtra("comName"));
-
-        textView1.setText(gelenMesaj);
 
         Intent i = getIntent();
          User user = (User) i.getSerializableExtra("nesne");
          String nest = user.getFirsName();
+         textView2.setText(nest);
         Log.e("İSİM : ",user.getComName());
         System.out.println(nest);
 
