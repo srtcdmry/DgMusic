@@ -16,10 +16,11 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         textView1 = findViewById(R.id.textView1);
+        textView2 = findViewById(R.id.textView2);
 
         Intent i = getIntent();
          User user = (User) i.getSerializableExtra("nesne");
-         String nest = user.getFirsName();
+         String nest = String.valueOf(user.getFirsName());
          textView2.setText(nest);
         Log.e("İSİM : ",user.getComName());
         System.out.println(nest);
