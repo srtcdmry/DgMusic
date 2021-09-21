@@ -17,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String firsName = "Sertac Yılmaz";
-        String lastName = "Demiray";
-        int age = 27 ;
-        String comName = "DgPays";
+//        String firsName = "Sertac Yılmaz";
+//        String lastName = "Demiray";
+//        int age = 27 ;
+//        String comName = "DgPays";
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.button);
 
@@ -28,13 +28,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+                User user = new User("Sertac Yilmaz","Demiray",27,"DgPays");
                 Intent intent = new Intent(MainActivity.this,MainActivity2.class);
-                intent.putExtra("firsName",firsName);
-                intent.putExtra("lastName",lastName);
-                intent.putExtra("age",age);
-                intent.putExtra("comName",comName);
+//                intent.putExtra("firsName",firsName);
+//                intent.putExtra("lastName",lastName);
+//                intent.putExtra("age",age);
+//                intent.putExtra("comName",comName);
+                intent.putExtra("nesne",user);
                 startActivity(intent);
             }
         });
     }
+
 }
